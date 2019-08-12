@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="resource/style/style.css">
+
+    <!-- Font Awesome -->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+   
+    <script src="resource/script/script.js"></script>
+    <!-- HTML5Shiv -->
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <title>Sistema Hospital Regina</title>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a style="color: #005A9C;" href="javascript:void(0)" class="closebtn" onclick="closeNav(); removeAjustePagina();">&times;</a>
+  <a href="perfil.html"><div class="link text-center mt-5"><i class="fas fa-user fa-3x mt-2 text-center"></i><h6><b>Perfil</b></h6></div></a>
+  <a href="home.html"><div class="link text-center"><i class="fas fa-vials fa-2x mt-3 text-center"></i><h6><b>Exames</b></h6></div></a>
+</div>
+
+<div style="height: 60px; background:#005A9C;" class="sombra" id="main">
+  <label class="mt-2 barra" style="color: #ffffff; margin-top:16px; margin-left: 20px; font-size:30px; cursor:pointer" onclick="openNav(); ajustaPagina();">&#9776; </label>
+  <span class="float-right mr-4 mt-3"><i style="font-size:20px; color:#ffffff" class="far fa-user "><?php $_SESSION['nome-usuario'];?><a style="color:#ffffff; text-decoration:none;" href="#" title="Sair do Sistema"> » Logout</a></i></span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "200px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+
+<section class="d-flex mt-2 principal" id=""><!-- Inicio home -->
+  <div class="container align-self-center"><!-- Inicio container -->
+      <div class="row"><!-- Inicio row -->
+          <div class="col-md-5 mt-3">
+              <img class="img-fluid text-center" src="resource/imagens/foto.png" width="303px" height="126px"/>
+          </div>
+
+          <div class="col-md-7 mt-5 left text-left">
+             <h1 style="color: #005A9C;">Consulta dos Exames</h1>
+             <p style="color: #47525E; font-size: 25px;">Confira os seus próximos exames,
+                além de consultar os resultados dos exames anteriores. </p>
+                      
+          </div>
+      </div><!-- Fim row -->
+</div><!-- Fim container -->
+</section><!-- Fim home -->
+
+<section class="d-flex principal"><!--Inicio seção pesquisa de exames-->
+  <div class="container align-self-center"><!--Inicio container-->
+      <div class="row"><!--Inicio row container-->
+          <div class="col-md-12"><!--Inicio col container-->
+                <div style="height: 44px;" class="bg-azul-escuro mt-4 sombra">
+                  <h4 style="padding: 5px;  margin-left: 10px; color:#ffffff; ">Próximos exames</h4>
+                </div>
+                 <!-- A tebela abaixo só vai ser mostrada após clicar na lupa abaixo -->
+                <div class="mt-5 text-center"><a href="#"><i style="color:#005A9C;" class="fas fa-search fa-2x"></i></a></div>
+                 
+                 <!-- Aqui abaixo vai trazer o resultado da pesquisa dos exemes -->
+                <div class="table-responsive-md">
+                    
+                    <table style class="table table-striped table-bordered table-hover mt-4 text-center align-middle">
+                      <thead>
+                        <tr>
+                          <th scope="col">Data</th>
+                          <th scope="col">Especialidade</th>
+                          <th scope="col">Tipo do exame</th>
+                          <th scope="col">Download</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>07/06/2019</th>
+                          <td>Clinico geral</td>
+                          <td>Hemograma</td>
+                          <td><a href="#"><i style="color:#005A9C;" class="far fa-copy fa-2x"></i></a></td>
+                        </tr>
+                      </tbody>    
+                    </table>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                      <div style="height: 44px;" class="bg-azul-escuro mt-5 sombra">
+                          <h4 style="padding: 5px;  margin-left: 10px; color:#ffffff; ">Resultados dos exames</h4>
+                      </div>
+                  </div>
+                </div> 
+                
+                <div class="row">
+                  <div class="col-md-12">
+                       <!-- Aqui abaixo vai trazer o resultado dos exemes -->
+                        <div class="table-responsive-md">
+                            
+                          <table style class="table table-striped table-bordered table-hover mt-5 mb-5 text-center align-middle">
+                            <thead>
+                              <tr>
+                                <th scope="col">Data</th>
+                                <th scope="col">Especialidade</th>
+                                <th scope="col">Tipo do exame</th>
+                                <th scope="col">Download</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>07/06/2019</th>
+                                <td>Clinico geral</td>
+                                <td>Hemograma</td>
+                                <td><a href="#"><i style="color:#005A9C;" class="far fa-copy fa-2x"></i></a></td>
+                              </tr>
+                            </tbody>    
+                          </table>
+                        </div>
+                  </div>
+                </div>
+          </div><!--Final col container-->
+      </div><!--Final row container-->
+  </div><!--Final container-->        
+</section><!--Fim seção pesquisa de exames-->
+
+<!-- Desenvolvido por Paulo Godoy 
+Data: 06/06/2019
+-->
+
+
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html> 

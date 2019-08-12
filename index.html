@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="resource/style/style.css">
+
+    <!-- Font Awesome -->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+   
+
+    <!-- HTML5Shiv -->
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <title>Sistema Hospital Regina</title>
+</head>
+<body class="fundo">
+   
+
+    <header  class="cabecalho sombra"><!-- Inicio cabecalho -->
+        
+
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+                <div class="container">
+                    <h5 class="text-left end">Av. Dr. Maurício Cardoso 711 - Bairro Hamburgo Velho, Novo Hamburgo</h5>
+    
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                        <i class="fas fa-bars text-white"></i>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="nav-principal">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><i style="color: #fff; font-size: 18px; margin-top: 14px;" class="fas fa-mobile-alt fa-1x "><span> (51) 3553.8800</span></i></li>
+                            <li class="nav-item divisor"></li>
+                            <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/diagnosticosregina" target="_blank"><i style="color: #fff; font-size: 18px; margin-top: 8px;" class="fab fa-facebook-f fa-1x "></i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://br.linkedin.com/company/hospital-regina" target="_blank"><i style="color: #fff; font-size: 18px; margin-top: 8px;" class="fab fa-linkedin-in fa-1x"></i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/explore/locations/217298638/brazil/novo-hamburgo/hospital-regina/?hl=pt-br" target="_blank"><i style="color: #fff; font-size: 18px; margin-top: 8px;" class="fab fa-instagram fa-1x"></i></a></li>
+                        </ul>
+                    </div>
+    
+                </div>
+            </nav>
+    
+    </header><!-- Fim cabecalho -->
+
+    <section class="d-flex"><!-- Inicio home -->
+        <div class="container align-self-center"><!-- Inicio container -->
+            <div class="row"><!-- Inicio row -->
+                <div class="col-md-6"><!--Inicio col-->
+                    <div  align="center"><!--Inicio conteudo-->
+                        
+                        <img class="img-fluid" style="margin-top: 40px;" src="resource/imagens/image_capa.png" widht="691px" height="445px" />
+                                
+                    </div><!--fim conteudo-->
+                </div><!--fim col-->
+
+                <div class="col-md-6"><!--Inicio col-->
+                    <div class="card card-container input-group">
+                        <!-- <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" /> -->
+                        <h3 class="texto-login">Dados de acesso</h3>
+                        <p id="profile-name" class="profile-name-card">Para acessar seus exames, preencha os campos abaixo:</p>
+                        <form class="form-signin" method="get" action="home.html">
+                            <span id="reauth-email" class="reauth-email"></span>
+                                <input type="text" id="nome" class="form-control" placeholder="Nome" required autofocus/>
+                                    <i class="fas fa-user us"></i>
+                                    
+                                <input style="margin-top: -15px;" type="password" id="senha" class="form-control" placeholder="Senha" required/>
+                                <i class="fas fa-key pwd"></i>
+                                
+                            <div id="remember" class="checkbox">
+                                <label style="color:#fff;">
+                                    <input type="checkbox" value="remember-me"/> Lembre-se de mim
+                                </label>
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block btn-signin sombra-btn" type="submit">Entrar</button>
+                        </form><!-- /form -->
+                        <a style="color:#fff;" href="#" class="forgot-password">
+                            Esqueceu a senha?
+                        </a>
+                    </div><!-- /card-container -->
+                </div><!--fim col-->
+            </div><!-- Fim row -->
+        </div><!-- Fim container -->
+    </section><!-- Fim home -->
+
+
+        
+<!-- Desenvolvido por Paulo Godoy 
+Data: 06/06/2019
+-->
+
+
+
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

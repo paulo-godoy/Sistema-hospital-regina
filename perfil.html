@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="resource/style/style.css">
+
+    <!-- Font Awesome -->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+   
+    <script src="resource/script/script.js"></script>
+    <!-- HTML5Shiv -->
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <title>Sistema Hospital Regina</title>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a style="color: #005A9C;" href="javascript:void(0)" class="closebtn" onclick="closeNav(); removeAjustePagina();">&times;</a>
+  <a href="#"><div class="link text-center mt-5"><i class="fas fa-user fa-3x mt-2 text-center"></i><h6><b>Perfil</b></h6></div></a>
+  <a href="home.html"><div class="link text-center"><i class="fas fa-vials fa-2x mt-3 text-center"></i><h6><b>Exames</b></h6></div></a>
+</div>
+
+<div style="height: 60px; background:#005A9C;" class="sombra" id="main">
+  <label class="mt-2 barra" style="color: #ffffff; margin-top:16px; margin-left: 20px; font-size:30px; cursor:pointer" onclick="openNav(); ajustaPagina();">&#9776; </label>
+  <span class="float-right mr-4 mt-3"><i style="font-size:20px; color:#ffffff" class="far fa-user "><?php $_SESSION['nome-usuario'];?><a style="color:#ffffff; text-decoration:none;" href="#" title="Sair do Sistema"> » Logout</a></i></span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "200px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+
+<section class="d-flex mt-2 principal" id=""><!-- Inicio home -->
+  <div class="container align-self-center"><!-- Inicio container -->
+      <div class="row"><!-- Inicio row -->
+          <div class="col-md-6 mt-3">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="text-center">
+                          <img class="img-fluid" src="resource/imagens/foto.png" width="303px" height="126px"/>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-md-12 mt-5">
+                      <h2 class="text-center" style="color:#005A9C;">Perfil</h2>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-md-12 mt-3">
+                     <p style="color:#47525E; font-size: 15pt;">Informações básicas, como seu nome e foto, 
+                        usadas nos serviços do Hospital Regina.</p>
+                  </div>
+              </div>
+              
+          </div>
+
+          <div class="col-md-6 mt-5 left text-left">
+              <div class="container mb-5">
+                  
+                  <form style="background:#005A9C; padding:25px; color:#fff;" class="form-horizontal sombra-form-perfil" action="">
+                      <div class="form-group">
+                            <div style=""  class="text-center">
+                                    <input src type="file" name="file-5[]" id="file-5" class="inputfile inputfile-4 esconde" data-multiple-caption="{count} files selected" multiple />
+                                    <label for="file-5"><figure class="sombra-foto-perfil"><i style="color: #005A9C;" class="mt-1 fas fa-upload fa-2x"></i></figure> <span>Upload da foto&hellip;</span></label>
+                            </div>
+                          <label class="control-label col-sm-2" for="nome">Nome:</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="nome" placeholder="Digite o nome" name="nome">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="endereco">Endereço:</label>
+                           <div class="col-sm-10">          
+                              <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço" name="endereco">
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           
+                            <label class="control-label col-sm-5" for="endereco">Data de Nascimento:</label>
+                             <div class="col-sm-10">  
+                                <input type="date" class="form-control" id="nascimento" name="nascimento">
+                             </div>
+                        </div>
+                        <div class="form-group">
+                                <label class="control-label col-sm-2" for="telefone">Telefone:</label>
+                                 <div class="col-sm-10">          
+                                    <input type="tel" class="form-control" id="telefone" placeholder="Digite o telefone" name="telefone" size="20" maxlength="15" onkeypress="mascara(this)">
+                                 </div>
+                             </div>
+                       <div class="form-group">        
+                            <label class="control-label col-sm-2" for="email">E-mail:</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email" placeholder="Digite o e-mail" name="email">
+                            </div>
+                            <div class="form-group">        
+                                <div class="col-sm-offset-2 col-sm-10 mt-4">
+                                  <button style="width:70px;" type="submit" class="btn btn-lg btn-primary  btn-signin sombra-btn">Enviar</button>
+                                </div>
+                            </div>
+                  </form>
+              </div>
+           </div>
+      </div><!-- Fim row -->
+</div><!-- Fim container -->
+</section><!-- Fim home -->
+
+<!-- Desenvolvido por Paulo Godoy 
+Data: 06/06/2019
+-->
+
+
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html> 
